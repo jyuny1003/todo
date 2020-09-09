@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{% extends 'second/layout.html' %}
+
+    {% block title %}
+        <title>todo detail</title>       
+    {% endblock %}
+
+    {% block content %}
+        <div id="todo_container">
+            <h3>{{ todo.name }}</h3>
+                <div id="todo_detail">
+                
+                    <div id="tseq"><p>순번</p><p2>{{ todo.seq }}</p2></div>
+                    
+                    <div id="fname"><p>명칭</p><p2>{{ todo.name }}</p2></div>
+                    
+                    <div id="tstatus"><p>상태</p><p2>{{ todo.status }}</p2></div>
+                    
+                    <div id="treg"><p>등록일</p><p2>{{ todo.reg_date|date:"Y-m-d" }}</p2></div>
+                    
+                    <div id="tend"><p>종료일</p><p2>{{ todo.end_date|date:"Y-m-d" }}</p2></div>
+                    
+                    <div id="tdel"><p>삭제여부</p><p2>{{ todo.del_yn }}</p2></div>
+                    
+                    <div id="tgroup"><p>그룹</p><p2>{{ todo.group }}</p2></div>
+
+                </div>
+        </div>
+    {% endblock %}
+
+

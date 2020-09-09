@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html
+<head>
+    {% block title %}
+    {% endblock %}
+
+    <style>
+        body{
+            background-color: #D2E1FF;
+            margin:0 auto;
+            padding:0;
+            
+        }
+        #category{
+            width: 250px;
+            height: 100vh;
+            background-color: #14148C; 
+            color: white;
+            padding: 20px;
+            margin:0;
+            float: left;
+            
+        }
+        #category > h2{
+            margin: 20px;
+        }
+        ul{
+            list-style:none;
+            color: white;
+            line-height: 30px;
+        }
+    
+        #container{
+            
+            float: left;
+            width: 700px;
+            padding: 100px;
+            margin: 0 auto;
+        }
+
+        #container > h3{
+            font-size: 30px;
+            width: 600px;
+            border-bottom: 1px solid #a0a0a0;
+        }
+
+        #todo_container{
+            float: left;
+            width: 1100px;
+            padding: 100px;
+            margin: 0 auto;
+                      
+        } 
+
+        #todo_container > h3{
+            font-size: 30px;
+            border-bottom: 1px solid #a0a0a0;
+
+        }
+
+        #favor{
+            padding: 20px;
+            margin-bottom: 40px;
+            background-color: white;
+            text-align: center;
+            width: 560px;
+            border: 1px solid #a0a0a0;
+            border-radius: 10px;
+            font-weight: bold;
+            
+            
+        }
+
+        #end, #inprogress, #pending{
+            background-color: white;
+            width: 330px;
+            height: 50px;
+            text-align: center;
+            line-height: center;
+            margin-bottom: 20px;
+            border: 1px solid #a0a0a0;
+            border-radius: 10px;
+            font-weight: bold;
+
+        }
+
+        #endgroup, #inprogressgroup{
+            float: left;
+            margin-right: 30px;
+            text-align: center;
+        }
+
+        #pendinggroup{
+            float: left;
+            
+            text-align: center;
+        }
+
+
+        h4{
+            font-size: 20px;
+        }
+
+        #todo_detail, #favor_detail{
+            background-color: white;
+            width: 800px;
+            height: 250px;
+            line-height: center;
+            margin-bottom: 20px;
+            border: 1px solid #a0a0a0;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='category'>
+        <h2>Favorite & Todo</h2>
+        <ul>
+        <li><a href="/second/"/>Home</a></li>
+        <li><a href="/second/favorite"/>Favorite</a></li>
+        <li><a href="/second/todo"/>Todo</a></li>
+        </ul>
+    </div>
+    
+    
+    
+    {% block content %}
+    {% endblock %}
+
+    
+</body>
+</html>

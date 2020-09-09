@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>학생들</title>
+    </head>
+    <body>
+        <h3>{{ text }}</h3>
+        {% for student in students %}
+        <!--여기 내용들이 반복됨-->
+        <div>
+            {{ student.name }}
+            {{ student.address}}
+            {{ student.email }}
+        
+        </div>
+        {% endfor %}
+    </body>
+
+</html>

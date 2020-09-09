@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+{% extends 'second/layout.html' %}
+
+    {% block title %}
+        <title>todo</title>       
+    {% endblock %}
+
+    {% block content %}
+        <div id="todo_container">
+            <h3>{{ text }}</h3>
+            <div id="endgroup">
+            <h4>진행완료</h4>
+            {% for e in end %}
+                <div id="end">
+                    <a href='todo/{{e.seq}}'>
+                    {{ e.name }}
+                    {{ e.status}}
+                    {{ e.end_date|date:"Y-m-d" }}
+                    {{ e.group }}
+                    </a>
+                </div>
+            {% endfor %}
+            </div>
+
+            <div id="inprogressgroup">
+            <h4>진행중</h4>
+            {% for i in inprogress %}
+                <div id="inprogress">
+                    <a href='todo/{{i.seq}}'>
+                    {{ i.name }}
+                    {{ i.status}}
+                    {{ i.end_date|date:"Y-m-d" }}
+                    {{ i.group }}
+                    </a>
+                </div>
+            {% endfor %}
+            </div>
+
+            <div id="pendinggroup">
+            <h4>대기중</h4>
+            {% for p in pending %}
+                <div id="pending">
+                    <a href='todo/{{p.seq}}'>
+                    {{ p.name }}
+                    {{ p.status}}
+                    {{ p.end_date|date:"Y-m-d" }}
+                    {{ p.group }}
+                    </a>
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    {% endblock %}
+
+

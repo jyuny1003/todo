@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+{% extends 'second/layout.html' %}
+    {% block title %}
+        <title>favorite detail</title>
+    {% endblock %}
+    
+
+
+    {% block content %}
+        <div id="container">
+            <h3>{{ favorite.name }}</h3>
+                <div id="favor_detail">
+                    <div id="fseq"><p>순번</p><p2>{{ favorite.seq }}</p2></div>
+                    
+                    <div id="fname"><p>명칭</p><p2>{{ favorite.name }}</p2></div>
+                    
+                    <div id="furl"><p>URL</p><p2>{{ favorite.url }}</p2></div>
+                    
+                    <div id="rmemo"><p>메모</p><p2>{{ favorite.memo }}</p2></div>
+
+                    <div id="freg"><p>등록일</p><p2>{{ favorite.reg_date }}</p2></div>
+
+                    <div id="fgroup"><p>그룹</p><p2>{{ favorite.group }}</p2></div>
+                
+                </div>
+        </div>
+    {% endblock %}
+
+
+
+    
+
+
+

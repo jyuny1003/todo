@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+{% extends 'second/layout.html' %}
+    {% block title %}
+        <title>favorite</title>
+    {% endblock %}
+    
+
+
+    {% block content %}
+        <div id="container">
+            <h3>{{ text }}</h3>
+            {% for favor in favorite %}
+                <div id="favor">
+                    <a href='favorite/{{favor.seq}}'>
+                    <span>{{ favor.name }}</span>
+                    <span>{{ favor.url}}
+                    {{ favor.memo }}</span>   
+                    </a>            
+                </div>
+
+            {% endfor %}
+        </div>
+    {% endblock %}
+
+
+
+    
+
+
+
